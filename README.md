@@ -1,3 +1,4 @@
+```markdown
 # PySet Library / Библиотека PySet
 
 [![Python Version](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org)
@@ -6,7 +7,7 @@
 
 ---
 
-##  English
+## English
 
 ### Overview
 
@@ -16,14 +17,14 @@ PySet is a powerful Python library that automatically sorts and organizes object
 
 | Feature | Description |
 |---------|-------------|
-|  **Number Classification** | Positive, negative, zero, even, odd, decimal, integer |
-|  **Word Classification** | By length, palindromes, vowel/consonant start |
-|  **Automatic Sorting** | Objects are classified automatically when added |
-|  **Set Operations** | Union, intersection, difference, symmetric difference |
-|  **Filtering** | Custom conditions, range queries, prime numbers |
-|  **Statistics** | Get counts and information about all sets |
-|  **CLI Interface** | Interactive command line tool |
-|  **Specialized Classes** | NumberSet and WordSet for specific use cases |
+| 🔢 **Number Classification** | Positive, negative, zero, even, odd, decimal, integer |
+| 📝 **Word Classification** | By length, palindromes, vowel/consonant start |
+| ⚡ **Automatic Sorting** | Objects are classified automatically when added |
+| 🔗 **Set Operations** | Union, intersection, difference, symmetric difference |
+| 🎯 **Filtering** | Custom conditions, range queries, prime numbers |
+| 📊 **Statistics** | Get counts and information about all sets |
+| 🖥️ **CLI Interface** | Interactive command line tool |
+| 🛠️ **Specialized Classes** | NumberSet and WordSet for specific use cases |
 
 ### Installation
 
@@ -35,11 +36,11 @@ pip install pyset-sorting
 
 # or install with specific version
 pip install pyset-sorting==1.0.0
+```
 
-#from source
+#### From source
 
 ```bash
-
 # clone repository
 git clone https://github.com/yourusername/pyset.git
 cd pyset
@@ -49,8 +50,10 @@ pip install -e .
 
 # or regular installation
 pip install .
+```
 
-#quick start
+### Quick Start
+
 ```python
 from pyset import PySet
 
@@ -76,10 +79,11 @@ stats = ps.get_stats()
 print(f"Total items: {stats['total_items']}")
 print(f"Numbers: {stats['total_numbers']}")
 print(f"Words: {stats['total_words']}")
+```
 
-#numbers
+### Working with Numbers
+
 ```python
-
 from pyset import PySet, NumberSet
 
 # using generic PySet
@@ -102,10 +106,11 @@ ns.add(25, 30, 36, 49)
 print("\nPerfect squares:", ns.get_perfect_squares())
 print("Fibonacci numbers:", ns.get_fibonacci())
 print("Multiples of 5:", ns.get_multiples_of(5))
+```
 
-#words
+### Working with Words
+
 ```python
-
 from pyset import WordSet
 
 ws = WordSet()
@@ -131,11 +136,11 @@ print("Sorted alphabetically:", ws.sort_alphabetically())
 # find anagrams
 ws.add("race", "care", "acre")
 print("Anagrams of 'race':", ws.get_anagrams("race"))
+```
 
-#set operations
+### Set Operations
 
-```python 
-
+```python
 from pyset import PySet
 
 ps = PySet()
@@ -154,9 +159,11 @@ print("Symmetric diff (odd ^ primes):", ps.symmetric_difference(odd, primes))
 # set comparisons
 print("Is even subset of numbers?", ps.is_subset(even, ps.get_all_numbers()))
 print("Are odd and primes disjoint?", ps.is_disjoint(odd, primes))
-#custom 
-```python
+```
 
+### Custom Filtering
+
+```python
 from pyset import PySet
 
 ps = PySet()
@@ -175,9 +182,11 @@ print("Words containing 'e':", contains_e)
 ps.create_custom_set("small_numbers", [1, 2, 3])
 ps.create_custom_set("large_numbers", [100, 200, 300])
 print("Custom set 'small_numbers':", ps.get_custom_set("small_numbers"))
-#statics 
-```python
+```
 
+### Statistics
+
+```python
 from pyset import PySet
 
 ps = PySet()
@@ -188,5 +197,57 @@ stats = ps.get_stats()
 print("\n=== STATISTICS ===")
 for key, value in stats.items():
     print(f"{key.replace('_', ' ').title()}: {value}")
+```
 
+### Command Line Interface
 
+After installation, you can use the interactive CLI:
+
+```bash
+# start interactive shell
+pyset
+```
+
+Available commands:
+
+| Command | Description |
+|---------|-------------|
+| `help` | Show help menu |
+| `stats` | Show statistics |
+| `positive` | Show positive numbers |
+| `negative` | Show negative numbers |
+| `even` | Show even numbers |
+| `odd` | Show odd numbers |
+| `decimal` | Show decimal numbers |
+| `primes` | Show prime numbers |
+| `palindromes` | Show palindrome words |
+| `words [min] [max]` | Filter words by length |
+| `range [start] [end]` | Numbers in range |
+| `vowels` | Words starting with vowel |
+| `consonants` | Words starting with consonant |
+| `add [items]` | Add new items |
+| `compare [set1] [set2]` | Compare two sets |
+| `clear` | Clear all data |
+| `exit` | Exit program |
+
+Example CLI session:
+```bash
+$ pyset
+
+pyset> add 1,2,3,4,5,-1,-2,hello,world,level
+items added
+
+pyset> stats
+total_items: 10
+total_numbers: 7
+total_words: 3
+positive: 5
+negative: 2
+even: 3
+odd: 4
+
+pyset> positive
+positive: {1, 2, 3, 4, 5}
+
+pyset> palindromes
+palindromes: {'level'}
