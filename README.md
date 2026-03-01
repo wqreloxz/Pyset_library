@@ -1,4 +1,4 @@
-```markdown
+
 # PySet Library / Библиотека PySet
 
 [![Python Version](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org)
@@ -17,14 +17,14 @@ PySet is a powerful Python library that automatically sorts and organizes object
 
 | Feature | Description |
 |---------|-------------|
-| 🔢 **Number Classification** | Positive, negative, zero, even, odd, decimal, integer |
-| 📝 **Word Classification** | By length, palindromes, vowel/consonant start |
-| ⚡ **Automatic Sorting** | Objects are classified automatically when added |
-| 🔗 **Set Operations** | Union, intersection, difference, symmetric difference |
-| 🎯 **Filtering** | Custom conditions, range queries, prime numbers |
-| 📊 **Statistics** | Get counts and information about all sets |
-| 🖥️ **CLI Interface** | Interactive command line tool |
-| 🛠️ **Specialized Classes** | NumberSet and WordSet for specific use cases |
+|  **Number Classification** | Positive, negative, zero, even, odd, decimal, integer |
+|  **Word Classification** | By length, palindromes, vowel/consonant start |
+|  **Automatic Sorting** | Objects are classified automatically when added |
+|  **Set Operations** | Union, intersection, difference, symmetric difference |
+|  **Filtering** | Custom conditions, range queries, prime numbers |
+|  **Statistics** | Get counts and information about all sets |
+|  **CLI Interface** | Interactive command line tool |
+|  **Specialized Classes** | NumberSet and WordSet for specific use cases |
 
 ### Installation
 
